@@ -34,8 +34,10 @@
                         <div class="col-12 col-sm-6">
 
                             <!--<a href="#reserve" class="btn btn-warning btn-sm btn-block" role="button">Reserve Table</a>-->
-                            <a role="button" class="btn btn-block nav-link btn-warning" data-toggle="modal"
-                                data-target="#divForm">Reserve Table</a>
+                            <!--data-toggle=modal
+                            data-target=#divForm-->
+                            <a role="button" id="btnReserve" class="btn btn-block nav-link btn-warning">Reserve
+                                Table</a>
                         </div>
                     </div>
                 </div>
@@ -61,7 +63,8 @@
                             class="fa fa-address-card fa-lg"></span> Contact</a></li>
             </ul>
             <span class="navbar-text">
-                <a data-toggle="modal" data-target="#loginModal">
+                <!-- data-target=#loginModal-->
+                <a data-toggle="modal" id="btnLogin">
                     <span class="fa fa-sign-in"></span> Login</a>
             </span>
         </div>
@@ -118,86 +121,85 @@
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
-                    
-                        <form>
-                            <dl class="row">
 
-                                <dt class="col-6 col-sm-4"><label class="col-12 col-form-label">Number
-                                        of Guests</label>
-                                </dt>
-                                <dd class="col-6 col-sm-6">
-                                    <div class="row">
-                                        <div class="col-6 col-sm-2 form-check">
-                                            <input class="form-check-input check" type="radio" value="" id="chkbox1">
-                                            <label class="form-check-label" for="chkbox1">
-                                                1
-                                            </label>
-                                        </div>
-                                        <div class="col-6 col-sm-2 form-check">
-                                            <input class="form-check-input check" type="radio" value="" id="chkbox2">
-                                            <label class="form-check-label" for="chkbox2">2</label>
-                                        </div>
-                                        <div class="col-6 col-sm-2 form-check">
-                                            <input class="form-check-input check" type="radio" value="" id="chkbox3">
-                                            <label class="form-check-label" for="chkbox3">3</label>
-                                        </div>
+                    <form>
+                        <dl class="row">
 
-                                        <div class="col-6 col-sm-2 form-check">
-                                            <input class="form-check-input check" type="radio" value="" id="chkbox4">
-                                            <label class="form-check-label" for="chkbox4">4</label>
-                                        </div>
-                                        <div class="col-6 col-sm-2 form-check">
-                                            <input class="form-check-input check" type="radio" value="" id="chkbox5">
-                                            <label class="form-check-label" for="chkbox5">5</label>
-                                        </div>
-                                        <div class="col-6 col-sm-2 form-check">
-                                            <input class="form-check-input check" type="radio" value="" id="chkbox6">
-                                            <label class="form-check-label" for="chkbox6">6</label>
-                                        </div>
+                            <dt class="col-6 col-sm-4"><label class="col-12 col-form-label">Number
+                                    of Guests</label>
+                            </dt>
+                            <dd class="col-6 col-sm-6">
+                                <div class="row">
+                                    <div class="col-6 col-sm-2 form-check">
+                                        <input class="form-check-input check" type="radio" value="" id="chkbox1">
+                                        <label class="form-check-label" for="chkbox1">
+                                            1
+                                        </label>
                                     </div>
-                                </dd>
-                                <dt class="col-6 col-sm-4"><label class="col-12 col-form-label">Section</label>
-                                </dt>
-                                <dd class="col-6 col-sm-6">
-                                    <div class="row">
-                                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                            <label class="btn  btn-success  active">
-                                                <input type="radio" name="options" id="option1" autocomplete="off"
-                                                    checked> Non-Smoking
-                                            </label>
-                                            <label class="btn btn-danger">
-                                                <input type="radio" name="options" id="option2" autocomplete="off">
-                                                Smoking
-                                            </label>
-
-                                        </div>
+                                    <div class="col-6 col-sm-2 form-check">
+                                        <input class="form-check-input check" type="radio" value="" id="chkbox2">
+                                        <label class="form-check-label" for="chkbox2">2</label>
+                                    </div>
+                                    <div class="col-6 col-sm-2 form-check">
+                                        <input class="form-check-input check" type="radio" value="" id="chkbox3">
+                                        <label class="form-check-label" for="chkbox3">3</label>
                                     </div>
 
-                                </dd>
-                                <dt class="col-6 col-sm-4"><label class="col-12 col-form-label">Date and
-                                        Time</label>
-                                </dt>
-                                <dd class="col-6 col-sm-6">
-                                    <div class="row">
-                                        <input class="col-5 form-control" placeholder="Date">
-                                        &nbsp;
-                                        <input class="col-5 form-control" placeholder="Time">
+                                    <div class="col-6 col-sm-2 form-check">
+                                        <input class="form-check-input check" type="radio" value="" id="chkbox4">
+                                        <label class="form-check-label" for="chkbox4">4</label>
                                     </div>
-                                </dd>
-                                <dt class="col-6 col-sm-4"></dt>
-                                <dd class="col-6 col-sm-6">
-                                    <div class="from-group row" role="group">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-dismiss="modal">Cancel</button>
-                                        &nbsp;
-                                        <button type="submit" class="btn btn-primary">Reserve</button>
+                                    <div class="col-6 col-sm-2 form-check">
+                                        <input class="form-check-input check" type="radio" value="" id="chkbox5">
+                                        <label class="form-check-label" for="chkbox5">5</label>
                                     </div>
-                                </dd>
+                                    <div class="col-6 col-sm-2 form-check">
+                                        <input class="form-check-input check" type="radio" value="" id="chkbox6">
+                                        <label class="form-check-label" for="chkbox6">6</label>
+                                    </div>
+                                </div>
+                            </dd>
+                            <dt class="col-6 col-sm-4"><label class="col-12 col-form-label">Section</label>
+                            </dt>
+                            <dd class="col-6 col-sm-6">
+                                <div class="row">
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn  btn-success  active">
+                                            <input type="radio" name="options" id="option1" autocomplete="off" checked>
+                                            Non-Smoking
+                                        </label>
+                                        <label class="btn btn-danger">
+                                            <input type="radio" name="options" id="option2" autocomplete="off">
+                                            Smoking
+                                        </label>
+
+                                    </div>
+                                </div>
+
+                            </dd>
+                            <dt class="col-6 col-sm-4"><label class="col-12 col-form-label">Date and
+                                    Time</label>
+                            </dt>
+                            <dd class="col-6 col-sm-6">
+                                <div class="row">
+                                    <input class="col-5 form-control" placeholder="Date">
+                                    &nbsp;
+                                    <input class="col-5 form-control" placeholder="Time">
+                                </div>
+                            </dd>
+                            <dt class="col-6 col-sm-4"></dt>
+                            <dd class="col-6 col-sm-6">
+                                <div class="from-group row" role="group">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                    &nbsp;
+                                    <button type="submit" class="btn btn-primary">Reserve</button>
+                                </div>
+                            </dd>
 
 
-                            </dl>
-                        </form>
-                    
+                        </dl>
+                    </form>
+
 
                 </div>
             </div>
@@ -396,19 +398,29 @@
     </script>
 </body>
 <script>
-    $(document).ready(function(){
-        $("#carouselButton").click(function(){
-                if ($("#carouselButton").children("span").hasClass('fa-pause')) {
-                    $("#mycarousel").carousel('pause');
-                    $("#carouselButton").children("span").removeClass('fa-pause');
-                    $("#carouselButton").children("span").addClass('fa-play');
-                }
-                else if ($("#carouselButton").children("span").hasClass('fa-play')){
-                    $("#mycarousel").carousel('cycle');
-                    $("#carouselButton").children("span").removeClass('fa-play');
-                    $("#carouselButton").children("span").addClass('fa-pause');                    
-                }
-            });
+    $(document).ready(function () {
+        $("#carouselButton").click(function () {
+            if ($("#carouselButton").children("span").hasClass('fa-pause')) {
+                $("#mycarousel").carousel('pause');
+                $("#carouselButton").children("span").removeClass('fa-pause');
+                $("#carouselButton").children("span").addClass('fa-play');
+            }
+            else if ($("#carouselButton").children("span").hasClass('fa-play')) {
+                $("#mycarousel").carousel('cycle');
+                $("#carouselButton").children("span").removeClass('fa-play');
+                $("#carouselButton").children("span").addClass('fa-pause');
+            }
+        });
+
+        $("#btnReserve").click(function () {
+            $('#divForm').modal('show');
+        });
+        $("#btnLogin").click(function () {
+            $('#loginModal').modal('show');
+
+         });
+
+
     });
 </script>
 
